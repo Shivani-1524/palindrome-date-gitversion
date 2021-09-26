@@ -179,6 +179,7 @@ const loader = document.querySelector(".loader");
 
 
 loader.style.display = "none";
+outputText.style.display = "none";
 
 function submitHandler(_) {
     outputText.style.display = "none";
@@ -205,7 +206,7 @@ function submitHandler(_) {
         else {
             showMessage("Enter a birthday date !! 😉");
         }
-    }, 4000);
+    }, 3000);
 
 }
 

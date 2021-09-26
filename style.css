@@ -95,3 +95,18 @@ button {
   margin: auto;
   margin-top: 20px;
 }
+
+footer {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100vw;
+  height: fit-content;
+  text-align: center;
+}
+
+i {
+  margin: 7px;
+  font-size: 20px;
+  color: #fdffb6;
+}
