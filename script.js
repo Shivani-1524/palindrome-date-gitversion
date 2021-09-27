@@ -182,11 +182,11 @@ loader.style.display = "none";
 outputText.style.display = "none";
 
 function submitHandler(_) {
-    outputText.style.display = "none";
-    loader.style.display = "block";
-    setTimeout(() => {
-        let bdayStr = bdayInput.value;
-        if (bdayStr !== "" || bdayStr == null) {
+    if (bdayInput.value) {
+        outputText.style.display = "none";
+        loader.style.display = "block";
+        setTimeout(() => {
+            let bdayStr = bdayInput.value;
             let dateComponents = bdayStr.split('-');
             let date = {
                 day: Number(dateComponents[2]),
@@ -202,11 +202,10 @@ function submitHandler(_) {
                 let [ctr2, prevDate] = getPreviousPalindromeDate(date);
                 showMessage(`The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year} and the previous palindrome date is ${prevDate.day}-${prevDate.month}-${prevDate.year} you missed them both by ${ctr} day${ctr === 1 ? "" : "s"} and ${ctr2} day${ctr2 === 1 ? "" : "s"} respectively 😣`);
             }
-        }
-        else {
-            showMessage("Enter a birthday date !! 😉");
-        }
-    }, 3000);
+        }, 3000);
+    } else {
+        showMessage("Enter a birthday date !! 😉");
+    }
 
 }
 

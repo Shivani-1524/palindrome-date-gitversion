@@ -24,7 +24,7 @@ h1 {
 
 input {
   display: block;
-  width: 250px;
+  width: 170px;
   height: 30px;
   padding-left: 7px;
   margin-top: 7px;
@@ -98,7 +98,7 @@ button {
 
 footer {
   position: absolute;
-  bottom: 30px;
+  bottom: 10px;
   left: 0;
   width: 100vw;
   height: fit-content;
@@ -109,4 +109,10 @@ i {
   margin: 7px;
   font-size: 20px;
   color: #fdffb6;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    width: 90%;
+  }
 }
