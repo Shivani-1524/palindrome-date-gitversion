@@ -7,5 +7,6 @@ Some Examples:
 
 This app checks if a date is a palindrome in any format.  
 It also, tells you the number of days by which you missed it.  
+It was made using VanillaJS.
 Check it out: 
 https://palindrome-day.netlify.app/
