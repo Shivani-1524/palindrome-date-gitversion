@@ -1,4 +1,4 @@
-function reverseStr(message) {
+const reverseStr = (message) => {
     let listOfChars = message.split('');
     let reverseListOfChars = listOfChars.reverse();
     let reversedStr = reverseListOfChars.join('');
@@ -6,12 +6,12 @@ function reverseStr(message) {
     // return message.split('').reverse().join('');
 }
 
-function isPalindrome(str) {
+const isPalindrome = (str) => {
     let reverse = reverseStr(str);
     return str === reverse;
 }
 
-function convertDateToString(date) {
+const convertDateToString = (date) => {
     let dateStr = { day: '', month: '', year: '' };
     if (date.day < 10) {
         dateStr.day = '0' + date.day;
@@ -30,7 +30,7 @@ function convertDateToString(date) {
     return dateStr;
 }
 
-function getAllDateFormats(date) {
+const getAllDateFormats = (date) => {
     let dateStr = convertDateToString(date);
     let ddmmyyyy = dateStr.day + dateStr.month + dateStr.year;
     let mmddyyyy = dateStr.month + dateStr.day + dateStr.year;
@@ -42,7 +42,7 @@ function getAllDateFormats(date) {
     return [ddmmyyyy, mmddyyyy, yyyymmdd, ddmmyy, mmddyy, yymmdd];
 }
 
-function checkPalindromeForAllDateFormats(date) {
+const checkPalindromeForAllDateFormats = (date) => {
     let listOfPalindromes = getAllDateFormats(date);
     let isPalindromebool = false;
     for (let i = 0; i < listOfPalindromes.length; i++) {
@@ -54,7 +54,7 @@ function checkPalindromeForAllDateFormats(date) {
     return isPalindromebool;
 }
 
-function isLeapYear(year) {
+const isLeapYear = (year) => {
     if (year % 400 === 0) {
         return true;
     }
@@ -67,7 +67,7 @@ function isLeapYear(year) {
     return false;
 }
 
-function getPreviousDate(date) {
+const getPreviousDate = (date) => {
     let day = date.day - 1;
     let month = date.month;
     let year = date.year;
@@ -100,7 +100,7 @@ function getPreviousDate(date) {
     }
 }
 
-function getNextDate(date) {
+const getNextDate = (date) => {
     let day = date.day + 1;
     let month = date.month;
     let year = date.year;
@@ -140,7 +140,7 @@ function getNextDate(date) {
     };
 }
 
-function getNextPalindromeDate(date) {
+const getNextPalindromeDate = (date) => {
     let counter = 0;
     let nextDate = getNextDate(date);
 
@@ -155,7 +155,7 @@ function getNextPalindromeDate(date) {
     return [counter, nextDate];
 }
 
-function getPreviousPalindromeDate(date) {
+const getPreviousPalindromeDate = (date) => {
     let counter = 0;
     let prevDate = getPreviousDate(date);
 
@@ -181,7 +181,7 @@ const loader = document.querySelector(".loader");
 loader.style.display = "none";
 outputText.style.display = "none";
 
-function submitHandler(_) {
+const submitHandler = (_) => {
     if (bdayInput.value) {
         outputText.style.display = "none";
         loader.style.display = "block";
@@ -209,7 +209,7 @@ function submitHandler(_) {
 
 }
 
-function showMessage(txt) {
+const showMessage = (txt) => {
     loader.style.display = "none";
     outputText.style.display = "inline-block";
     outputText.innerText = txt;
